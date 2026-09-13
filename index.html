@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case Study: SMART CELL POS System | Muttaqien Fajrir</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --color-bg-light: #ffffff;
+        --color-bg-alt: #f8f9fa;
+        --color-text-dark: #111827;
+        --color-text-muted: #4b5563;
+        --color-accent: #0f172a; 
+        --color-border: #e5e7eb;
+        --color-brand: #2563eb;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--color-bg-light);
+        color: var(--color-text-dark);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4 {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--color-text-dark);
+      }
+
+      p {
+        color: var(--color-text-muted);
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: rgba(255, 255, 255, 0.98) !important;
+        border-bottom: 1px solid var(--color-border);
+        padding: 1rem 0;
+        backdrop-filter: blur(5px);
+      }
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--color-accent) !important;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+      .back-link {
+        color: var(--color-text-muted);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s ease;
+      }
+      .back-link:hover {
+        color: var(--color-brand);
+      }
+
+      /* Hero Section */
+      .cs-hero {
+        padding: 140px 0 80px;
+        background-color: var(--color-bg-alt);
+        border-bottom: 1px solid var(--color-border);
+      }
+      .cs-badge {
+        display: inline-block;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--color-brand);
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        margin-bottom: 1.5rem;
+      }
+      .cs-title {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+      .cs-subtitle {
+        font-size: 1.25rem;
+        color: var(--color-text-muted);
+        margin-bottom: 2rem;
+      }
+      .tech-stack span {
+        display: inline-block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--color-accent);
+        border: 1px solid var(--color-border);
+        padding: 0.3rem 0.8rem;
+        border-radius: 6px;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        background: #fff;
+      }
+
+      /* Mobile Mockup Styling (Mirip HP) */
+      .cs-mockup {
+        width: 100%;
+        max-width: 320px; /* Ukuran proporsional HP */
+        border-radius: 28px;
+        border: 8px solid #0f172a; /* Frame HP warna Slate 900 */
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+        object-fit: cover;
+      }
+      /* Margin khusus untuk gambar pertama (hero) agar naik sedikit */
+      .mockup-hero {
+        margin-top: -40px;
+      }
+
+      /* Project Info Bar */
+      .info-bar {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        border: 1px solid var(--color-border);
+        margin-bottom: 4rem;
+        box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+      }
+      .info-title {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #9ca3af;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+      }
+      .info-data {
+        font-weight: 600;
+        color: var(--color-accent);
+        margin: 0;
+      }
+
+      /* Sections */
+      .cs-section {
+        padding: 80px 0;
+      }
+      .cs-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--color-accent);
+      }
+      .feature-icon {
+        width: 48px;
+        height: 48px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--color-brand);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        background-color: var(--color-accent);
+        color: #fff;
+        padding: 3rem 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="https://takeeen.github.io/Portopolio_Web.github.io/">Muttaqien Fajrir</a>
+        <a href="https://takeeen.github.io/Portopolio_Web.github.io/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Portfolio</a>
+      </div>
+    </nav>
+
+   <!-- Hero Section -->
+   <section class="cs-hero">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9" data-aos="fade-up">
+          <span class="cs-badge">Case Study</span>
+          <h1 class="cs-title">SMART CELL POS System V4.2</h1>
+          <p class="cs-subtitle">Empowering local retail and hardware repair operations through an AI-integrated, offline-first web application.</p>
+          <div class="tech-stack mt-4">
+            <span>HTML/CSS/JS</span>
+            <span>Tailwind CSS</span>
+            <span>Chart.js</span>
+            <span>Gemini AI API</span>
+            <span>Web Bluetooth API</span>
+            <span>Google Apps Script</span>
+          </div>
+          
+          <!-- Informasi Deployment APK -->
+          <div class="mt-5" data-aos="fade-up" data-aos-delay="150">
+            <div class="d-inline-flex align-items-center bg-white border border-light rounded-pill px-4 py-2 shadow-sm">
+              <!-- Ikon Smartphone -->
+              <i class="bi bi-phone text-primary fs-5 me-2"></i>
+              <span class="text-secondary fw-bold" style="font-size: 0.85rem; letter-spacing: 0.05em;">DEPLOYED AS ANDROID APK</span>
+            </div>
+            <p class="text-muted mt-3 mx-auto" style="font-size: 0.85rem; max-width: 500px;">
+              This web-based system has been successfully wrapped and compiled into a fully functional Android application (APK) for seamless daily operations at the retail counter.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Mockup Image (Halaman Awal Login) & Info Bar -->
+    <div class="container position-relative text-center" style="z-index: 10;" data-aos="fade-up" data-aos-delay="200">
+      
+      <img src="project/halaman_awal.jpeg" alt="Login Screen POS" class="cs-mockup mockup-hero mx-auto d-block mb-5" />
+      
+      <div class="info-bar row text-center text-md-start">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <p class="info-title">Role</p>
+          <p class="info-data">Full-Stack Developer & Product Owner</p>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <p class="info-title">Context</p>
+          <p class="info-data">Entrepreneurial Endeavour</p>
+        </div>
+        <div class="col-md-3 mb-3 mb-md-0">
+          <p class="info-title">Timeline</p>
+          <p class="info-data">Ongoing Iteration (V4.2)</p>
+        </div>
+        <div class="col-md-3">
+          <p class="info-title">Core Goal</p>
+          <p class="info-data">Digitize Retail & Repair Workflow</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Challenge & Solution (Dashboard Laporan) -->
+    <section class="cs-section bg-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <h2>The Challenge & Business Overview</h2>
+            <p>Operating a mobile technology retail shop in Medan presents a unique set of operational hurdles. The business handles a complex mix of physical products, technical micro-soldering services, and digital transactions like cash transfers.</p>
+            <p>Relying on manual ledgers resulted in stock discrepancies, slow checkout times during peak hours, and an inability to track real-time profit margins. To solve this, the core dashboard was designed to give a high-level overview of daily revenue and profit targets instantly.</p>
+          </div>
+          <div class="col-lg-6 text-center" data-aos="fade-left">
+            <img src="project/transaksi.jpeg" alt="Dashboard Laporan POS" class="cs-mockup" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kasir & Offline First -->
+    <section class="cs-section bg-alt">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left">
+            <h2>Offline-First Synchronization</h2>
+            <p>Sporadic internet connectivity disruptions would often completely halt digital logging processes. To combat unreliable internet connectivity, the application utilizes a custom <code>localStorage</code> queuing system.</p>
+            <p>As seen in the <strong>Cashier Module</strong>, a persistent "OFFLINE" indicator informs the user. Cashiers can continue processing transactions, logging repairs, and managing inventory entirely offline. Once the connection is restored, a background worker autonomously synchronizes the payload queue with the Google Apps Script backend, ensuring zero data loss.</p>
+          </div>
+          <div class="col-lg-6 order-lg-1 text-center" data-aos="fade-right">
+            <img src="project/halaman_awal (8).jpeg" alt="Modul Kasir POS Offline" class="cs-mockup" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Scan Bukti Transfer -->
+    <section class="cs-section bg-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="feature-icon"><i class="bi bi-magic"></i></div>
+            <h2>AI-Powered Receipt Extraction</h2>
+            <p>Processing banking transfers manually is prone to human error and time-consuming. I integrated the <strong>Gemini AI API</strong> to act as an automated data extractor within the print module.</p>
+            <p>Users simply upload a photo of a transfer receipt. The AI parses the image to automatically populate the cashier fields (Bank, Account Name, Nominal) via structured JSON. The system then dynamically generates ESC/POS formatted byte arrays and transmits them directly to a 58mm thermal printer via the <strong>Web Bluetooth API</strong>, providing immediate physical receipts for customers.</p>
+          </div>
+          <div class="col-lg-6 text-center" data-aos="fade-left">
+            <img src="project/halaman_awal (4).jpeg" alt="AI Scan Bukti Transfer" class="cs-mockup" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gudang & Servis -->
+    <section class="cs-section bg-alt">
+      <div class="container">
+        <div class="row align-items-center mb-5 pb-4">
+          <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left">
+            <h2>Inventory Management</h2>
+            <p>The Warehouse (Gudang) module allows for granular control over physical stock limits, capital prices, and selling prices. It provides an immediate visual warning (Kritis/Habis) to prevent overselling.</p>
+          </div>
+          <div class="col-lg-6 order-lg-1 text-center" data-aos="fade-right">
+            <img src="project/halaman_awal (2).jpeg" alt="Modul Tambah Gudang" class="cs-mockup" />
+          </div>
+        </div>
+
+        <div class="row align-items-center pt-4 border-top border-light">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <h2>Service Desk Integration</h2>
+            <p>To digitize the hardware repair side of the business, a dedicated Service module tracks customer device details, diagnostic issues, and repair statuses, streamlining the workflow from intake to pickup.</p>
+          </div>
+          <div class="col-lg-6 text-center" data-aos="fade-left">
+            <img src="project/halaman_awal (3).jpeg" alt="Modul Input Servis" class="cs-mockup" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data-Driven Analytics -->
+    <section class="cs-section bg-white">
+      <div class="container">
+        <div class="text-center mb-5 pb-4" data-aos="fade-up">
+          <div class="feature-icon mx-auto"><i class="bi bi-graph-up-arrow"></i></div>
+          <h2>Data-Driven Owner Analytics</h2>
+          <p class="mx-auto" style="max-width: 700px;">Utilizing <strong>Chart.js</strong>, the owner dashboard provides real-time financial insights to inform strategic discounting and hardware procurement.</p>
+        </div>
+
+        <div class="row g-5 justify-content-center">
+          <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="100">
+             <img src="project/halaman_awal (7).jpeg" alt="Trend Chart & Top Products" class="cs-mockup mb-3" />
+             <h5 class="mt-3">Revenue Trends</h5>
+             <p class="text-muted small">Tracks daily revenue versus profit margins and identifies top-performing product categories.</p>
+          </div>
+          <div class="col-md-5 text-center" data-aos="fade-up" data-aos-delay="200">
+             <img src="project/halaman_awal (6).jpeg" alt="Heatmap & Slow Moving Items" class="cs-mockup mb-3" />
+             <h5 class="mt-3">Operational Heatmap</h5>
+             <p class="text-muted small">Visualizes peak operational hours and categorizes slow-moving inventory.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Process -->
+    <section class="cs-section bg-alt border-top border-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 data-aos="fade-up">The Learning Process</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Building this system pushed my boundaries as a developer. I encountered and resolved complex race conditions where rapid offline inputs could duplicate during synchronization. Fixing this required implementing unique UUIDs for every payload and creating a strict optimistic UI updating pattern.</p>
+            <p data-aos="fade-up" data-aos-delay="200">This project perfectly encapsulates my interdisciplinary approach: <strong>applying structured business administration logic to solve real-world problems through innovative front-end web development.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <h4 class="mb-4 text-white">Ready to bring this work ethic to Apple Developer Academy.</h4>
+        <a href="https://takeeen.github.io/Portopolio_Web.github.io/" class="btn btn-outline-light px-4 py-2" style="border-radius: 50px; font-weight: 600;">Return to Portfolio</a>
+        <p class="mt-5 mb-0" style="font-size: 0.85rem;">&copy; 2026 Muttaqien Fajrir. Built for innovation.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true, 
+        duration: 800, 
+        offset: 50,
+        easing: 'ease-out-cubic'
+      });
+    </script>
+  </body>
+</html>
